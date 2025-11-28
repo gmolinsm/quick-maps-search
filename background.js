@@ -10,7 +10,6 @@ chrome.runtime.onInstalled.addListener(() => {
 // On menu click
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "search-google-maps") {
-    console.log("Executing script...")
     chrome.scripting.executeScript(
       {
         target: { tabId: tab.id },
